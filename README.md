@@ -6,6 +6,8 @@
 
 A production-ready cookiecutter template for building high-performance RESTful APIs using **FastAPI**, **MongoDB** (Motor), and **OpenAPI** code generation.
 
+**🌐 [Live Documentation & Website](https://therikb31.github.io/cookiecutter-openapi-fastapi-mongo/)**
+
 This repository serves as an excellent starter template for **Monorepo Microservice Architecture** and is designed to help developers master **Swagger/OpenAPI-led contract-driven API development**.
 
 ![Swagger Documentation](screenshot/swagger_documentation.png)
