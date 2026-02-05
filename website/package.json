@@ -1,19 +1,20 @@
 {
-	"name": "cookiecutter-fastapi-mongo-website",
+	"name": "cookiecutter-openapi-fastapi-mongo-website",
 	"version": "1.0.0",
 	"private": true,
-	"description": "Website for cookiecutter-fastapi-mongo template for restful backend API development",
+	"description": "Website for cookiecutter-openapi-fastapi-mongo template",
 	"scripts": {
 		"deploy": "gh-pages -d public"
 	},
 	"keywords": [
 		"fastapi",
 		"mongodb",
+		"openapi",
 		"cookiecutter",
 		"backend",
 		"template"
 	],
-	"author": "klee1611",
+	"author": "Rik Biswas",
 	"license": "MIT",
 	"devDependencies": {
 		"gh-pages": "^6.1.1"
