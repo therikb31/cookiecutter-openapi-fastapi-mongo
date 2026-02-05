@@ -15,21 +15,21 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://klee1611.github.io/cookiecutter-fastapi-mongo/">
-    <meta property="og:title" content="FastAPI MongoDB Template - Production-Ready Backend Boilerplate">
+    <meta property="og:url" content="https://therikb31.github.io/cookiecutter-openapi-fastapi-mongo/">
+    <meta property="og:title" content="FastAPI OpenAPI MongoDB Template - Production-Ready Backend Boilerplate">
     <meta property="og:description"
-        content="Production-ready FastAPI and MongoDB cookiecutter template for building high-performance async RESTful APIs with Docker and Poetry.">
+        content="Production-ready FastAPI and MongoDB cookiecutter template with OpenAPI generation and uv package management.">
     <meta property="og:image"
-        content="https://raw.githubusercontent.com/klee1611/cookiecutter-fastapi-mongo/main/screenshot/api_document.png">
+        content="https://raw.githubusercontent.com/therikb31/cookiecutter-openapi-fastapi-mongo/main/screenshot/swagger_documentation.png">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://klee1611.github.io/cookiecutter-fastapi-mongo/">
-    <meta name="twitter:title" content="FastAPI MongoDB Template - Production-Ready Backend Boilerplate">
+    <meta name="twitter:url" content="https://therikb31.github.io/cookiecutter-openapi-fastapi-mongo/">
+    <meta name="twitter:title" content="FastAPI OpenAPI MongoDB Template - Production-Ready Backend Boilerplate">
     <meta name="twitter:description"
-        content="Production-ready FastAPI and MongoDB cookiecutter template for building high-performance async RESTful APIs.">
+        content="Production-ready FastAPI and MongoDB cookiecutter template with OpenAPI generation.">
     <meta name="twitter:image"
-        content="https://raw.githubusercontent.com/klee1611/cookiecutter-fastapi-mongo/main/screenshot/api_document.png">
+        content="https://raw.githubusercontent.com/therikb31/cookiecutter-openapi-fastapi-mongo/main/screenshot/swagger_documentation.png">
 
     <!-- Schema.org markup for Google -->
     <script type="application/ld+json">
@@ -379,7 +379,7 @@
             </section>
 
             <section class="screenshot">
-                <img src="https://raw.githubusercontent.com/klee1611/cookiecutter-fastapi-mongo/main/screenshot/api_document.png"
+                <img src="https://raw.githubusercontent.com/therikb31/cookiecutter-openapi-fastapi-mongo/main/screenshot/swagger_documentation.png"
                     alt="Swagger API Documentation Screenshot" onerror="this.style.display='none'">
             </section>
 
@@ -477,17 +477,19 @@ make docker-compose-down</code></pre>
             <section>
                 <h2>Project Structure</h2>
                 <pre><code>your-project/
-├── app/
-│   ├── api/           # API endpoints
-│   ├── dao/           # Data access layer
-│   ├── db/            # Database connection
-│   ├── models/        # Pydantic models
-│   └── conf/          # Configuration
-├── tests/             # Test cases
-├── docker-compose.yml
-├── Dockerfile
-├── pyproject.toml
-└── Makefile</code></pre>
+├── libs/              # Shared libraries (MongoDB client, etc.)
+├── openapi/           # OpenAPI specs and generation scripts
+├── services/          # Microservices
+│   └── service_name/  # Service implementation
+│       ├── api/       # API route implementations
+│       ├── conf/      # Service configuration
+│       ├── main.py    # Service entry point
+│       └── Dockerfile # Service Docker container
+├── .env.example       # Environment variables template
+├── docker-compose.yaml # Local development setup
+├── Makefile           # Dev/Ops automation commands
+├── pyproject.toml     # Project dependencies (uv)
+└── start.sh           # Service startup script</code></pre>
             </section>
 
             <section>

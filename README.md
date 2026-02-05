@@ -65,6 +65,25 @@ To regenerate models from your OpenAPI spec:
 ./openapi/generate.sh <your_service_name>
 ```
 
+## Project Structure
+
+```text
+your-project/
+├── libs/              # Shared libraries (MongoDB client, etc.)
+├── openapi/           # OpenAPI specs and generation scripts
+├── services/          # Microservices
+│   └── service_name/  # Service implementation
+│       ├── api/       # API route implementations
+│       ├── conf/      # Service configuration
+│       ├── main.py    # Service entry point
+│       └── Dockerfile # Service Docker container
+├── .env.example       # Environment variables template
+├── docker-compose.yaml # Local development setup
+├── Makefile           # Dev/Ops automation commands
+├── pyproject.toml     # Project dependencies (uv)
+└── start.sh           # Service startup script
+```
+
 ## Website
 
 The project website is located in the `website/` directory.
