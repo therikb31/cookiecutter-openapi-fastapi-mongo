@@ -8,6 +8,8 @@ A production-ready cookiecutter template for building high-performance RESTful A
 
 This repository serves as an excellent starter template for **Monorepo Microservice Architecture** and is designed to help developers master **Swagger/OpenAPI-led contract-driven API development**.
 
+![Swagger Documentation](screenshot/swagger_documentation.png)
+
 ## Features
 
 - [x] **FastAPI**: Asynchronous, high-performance web framework.
