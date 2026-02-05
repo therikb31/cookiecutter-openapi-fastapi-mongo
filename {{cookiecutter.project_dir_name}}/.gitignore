@@ -1,0 +1,8 @@
+# OpenAPI
+.openapi-generator
+
+# Python Cache
+__pycache__/
+
+# Environment Variables
+.env

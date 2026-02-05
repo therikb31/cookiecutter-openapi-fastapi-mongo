@@ -1,0 +1,12 @@
+# OpenAPI Generator Ignore
+# Ignore root level project files to prevent clutter
+.flake8
+.gitignore
+Dockerfile
+README.md
+docker-compose.yaml
+openapi.yaml
+pyproject.toml
+requirements.txt
+setup.cfg
+tests/

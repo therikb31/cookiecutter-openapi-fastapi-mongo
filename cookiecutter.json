@@ -1,0 +1,13 @@
+{
+    "project_name": "FastAPI OpenAPI MongoDB Template",
+    "project_dir_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "service_name": "petstore",
+    "project_description": "A production-ready FastAPI template with MongoDB and OpenAPI code generation.",
+    "author_name": "Rik Biswas",
+    "author_email": "rikbiswas@example.com",
+    "version": "0.1.0",
+    "python_version": "3.12",
+    "mongodb_name": "fastapi_db",
+    "mongo_username": "root",
+    "mongo_password": "password"
+}

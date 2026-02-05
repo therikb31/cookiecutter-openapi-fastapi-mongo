@@ -1,0 +1,30 @@
+services:
+  mongodb:
+    image: mongo:7.0
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_DBNAME}
+    volumes:
+      - mongodb_data:/data/db
+
+  {{ cookiecutter.service_name }}:
+    build:
+      context: .
+      dockerfile: services/{{ cookiecutter.service_name }}/Dockerfile
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      MONGODB_URI: mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@mongodb:27017/${MONGO_DBNAME}?authSource=admin
+      MONGO_USERNAME: ${MONGO_USERNAME}
+      MONGO_PASSWORD: ${MONGO_PASSWORD}
+      MONGO_DBNAME: ${MONGO_DBNAME}
+    depends_on:
+      - mongodb
+
+volumes:
+  mongodb_data:
