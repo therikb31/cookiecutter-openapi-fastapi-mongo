@@ -1,5 +1,6 @@
 services:
   mongodb:
+    container_name: mongodb
     image: mongo:7
     restart: always
     ports:
