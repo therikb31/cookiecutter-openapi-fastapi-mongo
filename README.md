@@ -71,6 +71,19 @@ To regenerate models from your OpenAPI spec:
 ./openapi/generate.sh <your_service_name>
 ```
 
+## API Documentation
+
+This service exposes interactive API documentation powered by **Swagger UI**.
+
+### Access the Docs
+Once the application is running, open the following URL in your browser:
+
+**[http://localhost:8000/docs](http://localhost:8000/docs)**
+
+### Notes
+- The documentation is auto-generated from the OpenAPI schema.
+- You can explore endpoints, view request/response models, and execute API calls directly from the UI.
+
 ## Project Structure
 
 ```text
