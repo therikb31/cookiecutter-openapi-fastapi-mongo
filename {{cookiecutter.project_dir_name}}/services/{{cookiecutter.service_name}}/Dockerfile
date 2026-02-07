@@ -9,10 +9,10 @@ ENV UV_COMPILE_BYTECODE=1
 ENV PYTHONPATH=/app
 
 # Copy dependency files first for better caching
-COPY pyproject.toml uv.lock README.md ./
+COPY pyproject.toml README.md ./
 
 # Install dependencies without installing the project itself
-RUN uv sync --frozen --no-install-project --no-dev
+RUN uv sync --no-dev
 
 # Copy the library and openapi code required by the service
 COPY libs/ ./libs/
@@ -21,7 +21,7 @@ COPY openapi/ ./openapi/
 COPY services/{{ cookiecutter.service_name }}/ ./services/{{ cookiecutter.service_name }}/
 
 # Synchronize the project
-RUN uv sync --frozen --no-dev
+RUN uv sync --no-dev
 
 EXPOSE 8000
 

@@ -1,6 +1,6 @@
 services:
   mongodb:
-    image: mongo:7.0
+    image: mongo:7
     restart: always
     ports:
       - "27017:27017"
@@ -25,6 +25,10 @@ services:
       MONGO_DBNAME: ${MONGO_DBNAME}
     depends_on:
       - mongodb
+    volumes:
+      - ./services:/app/services
+      - ./libs:/app/libs
+      - ./openapi:/app/openapi
 
 volumes:
   mongodb_data:

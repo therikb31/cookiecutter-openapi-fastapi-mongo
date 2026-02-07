@@ -32,8 +32,8 @@ def main():
 
     print("\n✅ Project created successfully!")
     print("\nNext steps:")
-    print("1. Edit .env file")
-    print("2. Run the project: docker-compose up --build")
+    print("1. cd into the project directory")
+    print("2. Run start.ps1 or start.sh to start the project")
 
 
 if __name__ == "__main__":

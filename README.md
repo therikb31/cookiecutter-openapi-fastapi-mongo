@@ -52,7 +52,11 @@ MONGO_DBNAME=fastapi_db
 ### 3. Run with Docker
 
 ```bash
-docker-compose up --build
+# Windows
+./start.ps1
+
+# Linux/macOS
+./start.sh
 ```
 
 ### 4. Generation Script
